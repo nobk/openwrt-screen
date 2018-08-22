@@ -9,11 +9,11 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=screen-git
 PKG_VERSION:=4.99.0
-PKG_RELEASE:=10
+PKG_RELEASE:=11
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://git.savannah.gnu.org/git/screen.git
-PKG_SOURCE_VERSION:=c94fdfe9689d1c5dab54c69eb8bb60deed888e57
+PKG_SOURCE_VERSION:=b7cf6df01a121095235edb57dd4e88c62667adf4
 
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
