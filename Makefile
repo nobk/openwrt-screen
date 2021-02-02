@@ -8,15 +8,15 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=screen-git
-PKG_VERSION:=4.99.0
-PKG_RELEASE:=20
+PKG_SOURCE_DATE:=2020-12-17
+PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://git.savannah.gnu.org/git/screen.git
-PKG_SOURCE_VERSION:=f0d6154b95075f1e1198cd1fd12f7516cca57add
+PKG_SOURCE_VERSION:=21f04b22e0a1ed982142bfc9fc5935ec8b4f94cb
+PKG_MIRROR_HASH:=f3fe19f3dd8f4fd3f99cd8abcbf5ae9adf0cbc5e88b320b7b844217b908f7306
 
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)
-PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_SOURCE_SUBDIR)/src
 PKG_BUILD_PARALLEL:=1
 
@@ -44,7 +44,7 @@ define Package/screen-git/description
 endef
 
 define Build/Prepare
-        (cd $(BUILD_DIR) && tar -xzf $(DL_DIR)/$(PKG_SOURCE))
+        (cd $(BUILD_DIR) && tar -xf $(DL_DIR)/$(PKG_SOURCE))
 endef
 
 define Build/Configure
